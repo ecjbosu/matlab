@@ -98,7 +98,7 @@ classdef option < instruments.forward
             %Error if dimensions differ
             if ~isequal(size(Type),size(S),size(X),size(T),size(R),size(Q),size(V));
                 [Type, S, V, T, X, R, Q] = ...
-                    gist.gist.scalarexpand(Type, S, V, T, X, R, Q);
+                    core.scalarexpand(Type, S, V, T, X, R, Q);
             end
             
             out = obj;
@@ -137,7 +137,7 @@ classdef option < instruments.forward
                     size(obj.T), size(obj.X), size(obj.R), size(obj.Q))
                 
                 [Type, S, V, T, X, R, Q] ...
-                    = gist.gist.scalarexpand(obj.Type, obj.S, ...
+                    = core.scalarexpand(obj.Type, obj.S, ...
                     obj.V, obj.T, obj.X, obj.R, obj.Q);
                 
                 obj.Type = Type; obj.S = S; obj.V = V; obj.T = T; obj.X = X; 

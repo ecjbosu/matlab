@@ -9,12 +9,12 @@ if isempty(varargin);
     props = obj.nativeproperties;
     props = props(~ismember(props, exnative));
     props = props(~ismember(props, obj.protectedproperties));
-    [ props ] = gist.gist.scalarexpand(props);
+    [ props ] = core.scalarexpand(props);
     
 else
     %scalar expand the varargin
     if ~isequal(size(Type),size(S),size(X),size(T),size(Exdef),size(R),size(Q),size(V));
-        [ varargin ] = gist.gist.scalarexpand(varargin);
+        [ varargin ] = core.scalarexpand(varargin);
     end
 
 end

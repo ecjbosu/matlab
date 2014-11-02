@@ -31,7 +31,7 @@ for i = 1 : 1 : length(obj)
     %scalar expand if needed
 %     if ~isequal(size(Type),size(S),size(X),size(T),size(Exdef),size(R),size(Q),size(V));
 %         [Type, S, V, Exdef, T, X, R, Q] = ...
-%             gist.gist.scalarexpand(Type, S, V, Exdef, T, X, R, Q);
+%             core.scalarexpand(Type, S, V, Exdef, T, X, R, Q);
 %     end
 
     out(i) = valueSingleObj(obj(i), param);

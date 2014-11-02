@@ -30,7 +30,7 @@ vanilla = instruments.option(instruments.option, ExDef, Type, P, Exp, R, R, X, V
 
 vanilla = vanilla.calc(vanilla,'all');
 fh=vanilla.plot('S');
-matlab.graphics.mtit(fh, 'Standard Vanilla','yoff',0)
+matpacks.graphics.mtit(fh, 'Standard Vanilla','yoff',0)
 
 %Standard CON Digital
 digitalcon = digital();
@@ -43,7 +43,7 @@ digitalcon=digital(digitalcon, ExDef, Type, P, Exp, R, R, X, V);
 digitalcon = digitalcon.calc(digitalcon,'all');
 
 fh = digitalcon.plot('S');
-matlab.graphics.mtit(fh, 'Standard Digital CON','yoff',0)
+matpacks.graphics.mtit(fh, 'Standard Digital CON','yoff',0)
 
 % Standard APO
 % outside averaging period
@@ -57,7 +57,7 @@ standasianout = asian(asian, ExDef, Type, P, SA, X, Exp, T2, V, R, R);
 standasianout = standasianout.calc(standasianout,'all');
 fh=standasianout.plot('S');
 % outside averaging period standard apo = vanilla
-matlab.graphics.mtit(fh, 'Standard Asian Outside Averaging Period','yoff',0)
+matpacks.graphics.mtit(fh, 'Standard Asian Outside Averaging Period','yoff',0)
 
 % Standard APO
 % inside averaging period
@@ -72,7 +72,7 @@ standasianin = asian(asian, ExDef, Type, P, SAin, X, Expin, T2in, V, R, R);
 
 standasianin = standasianin.calc(standasianin,'all');
 fh=standasianin.plot('S');
-matlab.graphics.mtit(fh, 'Standard Asian Inside Averaging Period','yoff',0)
+matpacks.graphics.mtit(fh, 'Standard Asian Inside Averaging Period','yoff',0)
 
 %Digital Asian CON 
 % outside averaging period
@@ -83,7 +83,7 @@ asiandigitalout = asiandigitalout.calc(asiandigitalout,'all');
 asiandigitalout = asiandigitalout.calc(asiandigitalout,'INTRINSIC');
 
 fh=asiandigitalout.plot('S');
-matlab.graphics.mtit(fh, 'Digital Asian CON Outside Averaging Period','yoff',0)
+matpacks.graphics.mtit(fh, 'Digital Asian CON Outside Averaging Period','yoff',0)
 
 %Digital Asian CON 
 % inside averaging period
@@ -93,7 +93,7 @@ asiandigitalin.Typedef = 'con';
 asiandigitalin = asiandigitalin.calc(asiandigitalin,'all');
 
 fh=asiandigitalin.plot('S');
-matlab.graphics.mtit(fh, 'Digital Asian CON SA=X Inside Averaging Period','yoff',0)
+matpacks.graphics.mtit(fh, 'Digital Asian CON SA=X Inside Averaging Period','yoff',0)
 
 %Digital Asian CON 
 % deep in inside averaging period
@@ -104,7 +104,7 @@ asiandigitalind.Typedef = 'con';
 asiandigitalind = asiandigitalind.calc(asiandigitalind,'all');
 
 fh=asiandigitalind.plot('S');
-matlab.graphics.mtit(fh, 'Digital Asian CON SA>X Inside Averaging Period','yoff',0)
+matpacks.graphics.mtit(fh, 'Digital Asian CON SA>X Inside Averaging Period','yoff',0)
 
 %Digital Asian CON 
 % deep out inside averaging period
@@ -115,7 +115,7 @@ asiandigitalindo.Typedef = 'con';
 asiandigitalindo = asiandigitalindo.calc(asiandigitalindo,'all');
 
 fh=asiandigitalindo.plot('S');
-matlab.graphics.mtit(fh, 'Digital Asian CON SA<X Inside Averaging Period','yoff',0)
+matpacks.graphics.mtit(fh, 'Digital Asian CON SA<X Inside Averaging Period','yoff',0)
 
 [P asiandigitalout.NPV asiandigitalin.NPV asiandigitalind.NPV asiandigitalindo.NPV]
 

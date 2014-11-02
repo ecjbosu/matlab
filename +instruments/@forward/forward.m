@@ -83,7 +83,7 @@ classdef forward < instruments.instruments
             %Error if dimensions differ
             if ~isequal(size(Type),size(S),size(X),size(T),size(R),size(Q));
                 [Type, S, T, X, R, Q] = ...
-                    gist.gist.scalarexpand(Type, S, T, X, R, Q);
+                    core.scalarexpand(Type, S, T, X, R, Q);
 
             end
             
