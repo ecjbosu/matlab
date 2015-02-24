@@ -1,0 +1,16 @@
+
+
+[a,b]=apps.VAR.modelVARBU(varObj, expo, levels{1}, varmap);
+
+    t2t              = grpstats(expos, ...
+        {'ContractMonth' 'TradeTypeName' 'IndexLocation'}, 'sum', 'DataVars', {'TTLVolume'});
+    t2t.Properties.ObsNames = [];
+    t2t.Properties.VarNames = strrep(t2t.Properties.VarNames, 'sum_', '');
+    t2t.MarkDate = repmat(datenum(obj.MarkDate), length(t2t), 1);
+    
+    
+d=datatables.datatable.dsTOdm(datatables.datatable,...
+         'MarkDate', false, 'yyyy-mm-dd', ...
+         'ContractMonth', false, 'yyyy-mm-dd', ...
+         {'TradeTypeName' 'IndexLocation', 'TTLVolume'}, ...
+         @sum, t2t);
